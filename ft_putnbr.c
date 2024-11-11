@@ -1,26 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ostouayr <ostouayr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 10:20:52 by ostouayr          #+#    #+#             */
-/*   Updated: 2024/11/11 21:27:09 by ostouayr         ###   ########.fr       */
+/*   Created: 2024/11/11 21:18:57 by ostouayr          #+#    #+#             */
+/*   Updated: 2024/11/11 21:28:23 by ostouayr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_PRINTF
-#define LIBFT_PRINTF
+#include "libftprintf.h"
 
-#include <stdarg.h>
-#include <stdio.h>
-#include <unistd.h>
+int ft_putnbr(long n, int base)
+{
+	int count;
+	char *symbols;
 
-int ft_printf(const char *, ...);
-int ft_putchar(int c);
-int ft_putstr(char *str);
-int ft_print_adress(unsigned long n,int base);
-int ft_putnbr(long n, int base);
-
-#endif
+	count = 0;
+	symbols = "0123456789";
+	if(n < 0)
+	{
+		write(1, "-", 1);
+		return  ft_putnbr(-n,base) + 1;
+	}
+	else if (n < base)
+	{
+		return ft_putchar(symbols[n]);
+	}
+	else
+	{
+		count  = ft_putnbr(n / base, base);
+		return count + ft_putnbr(n % base , base);
+	}
+}
