@@ -6,11 +6,11 @@
 /*   By: ostouayr <ostouayr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 10:41:26 by ostouayr          #+#    #+#             */
-/*   Updated: 2024/11/12 13:23:59 by ostouayr         ###   ########.fr       */
+/*   Updated: 2024/11/12 21:23:04 by ostouayr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_print_hexa(long n, int base, char specifier)
 {

@@ -6,11 +6,11 @@
 /*   By: ostouayr <ostouayr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 12:28:19 by ostouayr          #+#    #+#             */
-/*   Updated: 2024/11/12 13:02:17 by ostouayr         ###   ########.fr       */
+/*   Updated: 2024/11/12 15:28:34 by ostouayr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putchar(int c)
 {

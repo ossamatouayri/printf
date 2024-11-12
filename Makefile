@@ -6,7 +6,7 @@
 #    By: ostouayr <ostouayr@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/12 11:12:16 by ostouayr          #+#    #+#              #
-#    Updated: 2024/11/12 12:38:39 by ostouayr         ###   ########.fr        #
+#    Updated: 2024/11/12 15:28:45 by ostouayr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ clean:
 $(NAME): $(OBJF)
 		ar rcs $(NAME) $(OBJF)
 
-%.o:%.c libftprintf.h
+%.o:%.c ft_printf.h
 		$(CC) $(CFLAGS) -c $< -o $@
 
 fclean: clean

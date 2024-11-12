@@ -6,11 +6,11 @@
 /*   By: ostouayr <ostouayr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 18:57:03 by ostouayr          #+#    #+#             */
-/*   Updated: 2024/11/12 13:23:27 by ostouayr         ###   ########.fr       */
+/*   Updated: 2024/11/12 21:17:05 by ostouayr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_print_adress(unsigned long n)
 {
