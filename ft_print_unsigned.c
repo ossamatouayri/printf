@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_print_unsigned.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ostouayr <ostouayr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/12 12:28:19 by ostouayr          #+#    #+#             */
-/*   Updated: 2024/11/12 13:02:17 by ostouayr         ###   ########.fr       */
+/*   Created: 2024/11/12 10:24:33 by ostouayr          #+#    #+#             */
+/*   Updated: 2024/11/12 13:24:16 by ostouayr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_putchar(int c)
+int	ft_print_unsigned(long n, int base)
 {
-	return (write(1, &c, 1));
+	int		count;
+	char	*symbols;
+
+	count = 0;
+	symbols = "0123456789";
+	if (n < base)
+	{
+		return (ft_putchar(symbols[n]));
+	}
+	else
+	{
+		count = ft_print_unsigned(n / base, base);
+		return (count + ft_print_unsigned(n % base, base));
+	}
 }
