@@ -11,7 +11,7 @@
 # Instructions
 #### 1. Clone the repository:
 ```bash
-git clone git@github.com:ossamatouayri/printf.git
+$ git clone git@github.com:ossamatouayri/printf.git
 ```
 #### 2. Compiling the library: Navigate to the ft_printf directory and run:
 
